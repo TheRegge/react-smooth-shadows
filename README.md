@@ -1,3 +1,8 @@
+# React Exercise Smooth Shadow Generator
+
+This is a re-engineering of the great [Smooth Shadow Generator](https://brumm.af/shadows) by
+[@funkensturm](https://twitter.com/funkensturm)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
