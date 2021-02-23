@@ -1,0 +1,18 @@
+html {
+  line-height: 1.15;
+  font-size: 16px;
+  font-family: 'Roboto'
+}
+body {
+  background-color: rgb(223, 230, 238);
+}
+
+.wrapper {
+  background-color: rgb(237, 242, 247);
+    display: grid;
+    grid-template-columns: 1fr 500px;
+}
+
+.wrapper > aside {
+  padding: 10px;
+}
