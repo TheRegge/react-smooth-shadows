@@ -1,5 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react'
+import PropTypes from 'prop-types'
 
 const LargeHandle = ({
   coordinates,
@@ -18,17 +18,17 @@ const LargeHandle = ({
     stroke={strokeColor}
     strokeWidth={strokeWidth}
     onMouseDown={onMouseDown}
-    style={{ cursor: "-webkit-grab" }}
+    style={{ cursor: '-webkit-grab' }}
   />
-);
+)
 
 LargeHandle.defaultProps = {
   coordinates: { x: 4, y: 4 },
-  fillColor: "white",
+  fillColor: 'white',
   radi: { x: 4, y: 4 },
-  strokeColor: "rgb(244, 0, 137)",
+  strokeColor: 'rgb(244, 0, 137)',
   strokeWidth: 1,
-};
+}
 
 LargeHandle.propTypes = {
   coordinates: PropTypes.shape({
@@ -43,6 +43,6 @@ LargeHandle.propTypes = {
   }),
   strokeColor: PropTypes.string,
   strokeWidth: PropTypes.number,
-};
+}
 
-export default LargeHandle;
+export default LargeHandle

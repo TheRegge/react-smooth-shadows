@@ -1,28 +1,27 @@
-import React, { useState } from "react";
-import Shadows from "./components/shadows";
-import InputSlider from "./components/ui/InputSlider";
-import Toolbox from "./components/ui/Toolbox";
-import InputCheckbox from "./components/ui/InputCheckbox";
-import Bezier from "./components/bezier";
-import "./App.css";
+import React, { useState } from 'react'
+import Shadows from './components/shadows'
+import InputSlider from './components/ui/InputSlider'
+import Toolbox from './components/ui/Toolbox'
+import InputCheckbox from './components/ui/InputCheckbox'
+import Bezier from './components/bezier'
+import './App.css'
 
 function App() {
-  const [alphas, setAlphas] = useState([]);
-  const [reversedAlphas, setReversedAlphas] = useState(false);
-  const [finalAlpha, setFinalAlpha] = useState(0.07);
-  const [finalBlur, setFinalBlur] = useState(80);
-  const [blurs, setBlurs] = useState([]);
-  const [vDistances, setVdistances] = useState([]);
-  const [finalVdistance, setFinalVdistance] = useState(100);
-  const [numShadows, setNumShadows] = useState(6);
+  const [alphas, setAlphas] = useState([])
+  const [reversedAlphas, setReversedAlphas] = useState(false)
+  const [finalAlpha, setFinalAlpha] = useState(0.07)
+  const [finalBlur, setFinalBlur] = useState(80)
+  const [blurs, setBlurs] = useState([])
+  const [vDistances, setVdistances] = useState([])
+  const [finalVdistance, setFinalVdistance] = useState(100)
+  const [numShadows, setNumShadows] = useState(6)
 
   const adjustFinalAlpha = (alpha) => {
-    setFinalAlpha(alpha / 100);
-  };
-  
+    setFinalAlpha(alpha / 100)
+  }
 
   const reverseAlphas = (e) => {
-    setReversedAlphas(e.target.checked);
+    setReversedAlphas(e.target.checked)
   }
 
   return (
@@ -105,7 +104,7 @@ function App() {
         </Toolbox>
       </aside>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

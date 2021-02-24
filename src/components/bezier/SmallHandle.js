@@ -8,6 +8,6 @@ const SmallHandle = ({ coordinates, onMouseDown }) => (
     strokeWidth={2}
     onMouseDown={onMouseDown}
   />
-);
+)
 
-export default SmallHandle;
+export default SmallHandle

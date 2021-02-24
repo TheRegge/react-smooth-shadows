@@ -1,5 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react'
+import PropTypes from 'prop-types'
 
 const Line = ({ from, to, color, strokeWidth, dash }) => (
   <line
@@ -11,12 +11,12 @@ const Line = ({ from, to, color, strokeWidth, dash }) => (
     strokeWidth={strokeWidth}
     strokeDasharray={dash}
   />
-);
+)
 
 Line.defaultProps = {
-  color: "#cccccc",
+  color: '#cccccc',
   strokeWidth: 1,
-};
+}
 
 Line.propTypes = {
   color: PropTypes.string,
@@ -30,6 +30,6 @@ Line.propTypes = {
     y: PropTypes.number,
   }),
   dash: PropTypes.array,
-};
+}
 
-export default Line;
+export default Line

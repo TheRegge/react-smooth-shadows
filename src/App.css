@@ -10,7 +10,7 @@ body {
 .wrapper {
   background-color: rgb(237, 242, 247);
     display: grid;
-    grid-template-columns: 1fr 500px;
+    grid-template-columns: 3fr 1fr;
 }
 
 .wrapper > aside {
