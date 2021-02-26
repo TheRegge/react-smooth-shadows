@@ -6,7 +6,7 @@ export const numshadowsSlice = createSlice({
     value: 6,
   },
   reducers: {
-    setNumshadows: (state, action) => {
+    SET_NUM_SHADOWS: (state, action) => {
       state.value = action.payload
     },
   },
@@ -16,5 +16,5 @@ export function totalNumShadowsSelector(state) {
   return state.numshadows.value
 }
 
-export const { setNumshadows } = numshadowsSlice.actions
+export const { SET_NUM_SHADOWS } = numshadowsSlice.actions
 export default numshadowsSlice.reducer
