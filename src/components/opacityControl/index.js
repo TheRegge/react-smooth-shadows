@@ -15,11 +15,6 @@ export function OpacityControl() {
   const numShadows = useSelector((state) => state.numshadows.value)
   const dispatch = useDispatch()
 
-  const handleChange = (e) => {
-    console.log(e)
-    dispatch(SET_REVERSE_ALPHAS(e.target.checked))
-  }
-
   return (
     <Toolbox label="Final opacity" counter={`${finalOpacity}`}>
       <InputSlider
