@@ -4,6 +4,7 @@ import { allAlphasSelector } from '../opacityControl/alphasSlice'
 import { reverseAlphasSelector } from '../opacityControl/alphasSlice'
 import { allBlursSelector } from '../blurControl/blursSlice'
 import { allVdistancesSelector } from '../vdistanceControl/vdistancesSlice'
+import { spreadSelector } from '../spreadControl/spreadSlice'
 import { round } from '../../utils'
 
 export const getAllShadows = createSelector(
@@ -12,7 +13,8 @@ export const getAllShadows = createSelector(
   reverseAlphasSelector,
   allBlursSelector,
   allVdistancesSelector,
-  (numShadows, allAlphas, reverseAlphas, allBlurs, allVdistances) => {
+  spreadSelector,
+  (numShadows, allAlphas, reverseAlphas, allBlurs, allVdistances, spread) => {
     let styles = ''
     let formatted = ''
     let cloneAlphas = [...allAlphas]
@@ -25,10 +27,12 @@ export const getAllShadows = createSelector(
       const a = round(cloneAlphas[i], 3)
       const v = round(allVdistances[i], 2)
       const b = round(allBlurs[i], 2)
+      const s = spread ? ` ${spread}px` : ''
+      const sf = spread ? ` <span class="value">${spread}px</span>` : ''
       const endline = i === numShadows - 1 ? '' : ',\n'
       const breakline = i === numShadows - 1 ? '' : '<br />'
-      styles += `0 ${v}px ${b}px rgba(0, 0, 0, ${a})${endline}`
-      formatted += `&nbsp; &nbsp;0 <span class="value">${v}</span>px <span class="value">${b}</span>px rgba(0, 0, 0, <span class="value">${a}</span>)${breakline}`
+      styles += `0 ${v}px ${b}px${s} rgba(0, 0, 0, ${a})${endline}`
+      formatted += `&nbsp; &nbsp;0 <span class="value">${v}</span>px <span class="value">${b}</span>px${sf} rgba(0, 0, 0, <span class="value">${a}</span>)${breakline}`
     }
 
     styles += ';'

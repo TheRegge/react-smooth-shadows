@@ -4,6 +4,7 @@ import BlurControl from './components/blurControl'
 import ShadowsControl from './components/shadowsControl'
 import OpacityControl from './components/opacityControl'
 import VdistanceControl from './components/vdistanceControl'
+import SpreadControl from './components/spreadControl'
 import './App.css'
 
 export function App() {
@@ -18,6 +19,7 @@ export function App() {
           <OpacityControl />
           <VdistanceControl />
           <BlurControl />
+          <SpreadControl />
         </div>
       </aside>
     </div>
