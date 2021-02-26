@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/smoother-shadows-generator/static/css/main.498678ab.chunk.css",
+    "main.js": "/smoother-shadows-generator/static/js/main.7cfa402d.chunk.js",
+    "main.js.map": "/smoother-shadows-generator/static/js/main.7cfa402d.chunk.js.map",
+    "runtime-main.js": "/smoother-shadows-generator/static/js/runtime-main.710ef208.js",
+    "runtime-main.js.map": "/smoother-shadows-generator/static/js/runtime-main.710ef208.js.map",
+    "static/js/2.e1967b2d.chunk.js": "/smoother-shadows-generator/static/js/2.e1967b2d.chunk.js",
+    "static/js/2.e1967b2d.chunk.js.map": "/smoother-shadows-generator/static/js/2.e1967b2d.chunk.js.map",
+    "static/js/3.1efe24cc.chunk.js": "/smoother-shadows-generator/static/js/3.1efe24cc.chunk.js",
+    "static/js/3.1efe24cc.chunk.js.map": "/smoother-shadows-generator/static/js/3.1efe24cc.chunk.js.map",
+    "index.html": "/smoother-shadows-generator/index.html",
+    "static/css/main.498678ab.chunk.css.map": "/smoother-shadows-generator/static/css/main.498678ab.chunk.css.map",
+    "static/js/2.e1967b2d.chunk.js.LICENSE.txt": "/smoother-shadows-generator/static/js/2.e1967b2d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.710ef208.js",
+    "static/js/2.e1967b2d.chunk.js",
+    "static/css/main.498678ab.chunk.css",
+    "static/js/main.7cfa402d.chunk.js"
+  ]
+}
