@@ -23,7 +23,7 @@ export function BlurControl() {
         easing="in"
         finalValue={finalBlur}
         observers={numShadows}
-        strokeWidth={1}
+        strokeWidth={1.5}
         viewBoxHeight={50}
         viewBoxWidth={200}
       />

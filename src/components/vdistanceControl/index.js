@@ -25,7 +25,7 @@ export function VdistanceControl() {
         easing="in"
         finalValue={finalVdistance}
         observers={numShadows}
-        strokeWidth={1}
+        strokeWidth={1.5}
         viewBoxHeight={50}
         viewBoxWidth={200}
       />

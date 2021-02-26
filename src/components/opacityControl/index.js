@@ -29,7 +29,7 @@ export function OpacityControl() {
         easing="inout"
         finalValue={finalOpacity}
         observers={numShadows}
-        strokeWidth={1.4}
+        strokeWidth={1.5}
         viewBoxHeight={40}
         viewBoxWidth={200}
       />
