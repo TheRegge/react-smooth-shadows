@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-smooth-shadows/static/css/main.498678ab.chunk.css",
-    "main.js": "/react-smooth-shadows/static/js/main.7cfa402d.chunk.js",
-    "main.js.map": "/react-smooth-shadows/static/js/main.7cfa402d.chunk.js.map",
+    "main.js": "/react-smooth-shadows/static/js/main.63c3e222.chunk.js",
+    "main.js.map": "/react-smooth-shadows/static/js/main.63c3e222.chunk.js.map",
     "runtime-main.js": "/react-smooth-shadows/static/js/runtime-main.0ee1edc4.js",
     "runtime-main.js.map": "/react-smooth-shadows/static/js/runtime-main.0ee1edc4.js.map",
     "static/js/2.e1967b2d.chunk.js": "/react-smooth-shadows/static/js/2.e1967b2d.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.0ee1edc4.js",
     "static/js/2.e1967b2d.chunk.js",
     "static/css/main.498678ab.chunk.css",
-    "static/js/main.7cfa402d.chunk.js"
+    "static/js/main.63c3e222.chunk.js"
   ]
 }
