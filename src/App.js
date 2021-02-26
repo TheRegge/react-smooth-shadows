@@ -16,7 +16,7 @@ export function App() {
           <p>Smooth Shadow Generator</p>
           <p>
             A shameless exercise, reengineering{' '}
-            <a href="brumm.af/shadows">brumm.af's original</a>.{' '}
+            <a href="https://brumm.af/shadows">brumm.af's original</a>.{' '}
           </p>
           <p>
             <a href="https://github.com/TheRegge/react-smooth-shadows">
