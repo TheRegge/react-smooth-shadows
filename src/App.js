@@ -5,12 +5,25 @@ import ShadowsControl from './components/shadowsControl'
 import OpacityControl from './components/opacityControl'
 import VdistanceControl from './components/vdistanceControl'
 import SpreadControl from './components/spreadControl'
+import GitHubIcon from '@material-ui/icons/GitHub'
 import './App.css'
 
 export function App() {
   return (
     <div className="wrapper">
       <main>
+        <div className="intro">
+          <p>Smooth Shadow Generator</p>
+          <p>
+            A shameless exercise, reengineering{' '}
+            <a href="brumm.af/shadows">brumm.af's original</a>.{' '}
+          </p>
+          <p>
+            <a href="https://github.com/TheRegge/react-smooth-shadows">
+              <GitHubIcon />
+            </a>
+          </p>
+        </div>
         <Shadows bgcolor="white" />
       </main>
       <aside>

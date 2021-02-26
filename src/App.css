@@ -14,6 +14,29 @@ body {
   height: 100vh;
 }
 
+.wrapper .intro {
+  color: rgb(73, 100, 128);
+  font-size: 0.8em;
+  font-weight: 500;
+  left: 20px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 20px;
+}
+
+.wrapper .intro p {
+  padding: 0;
+  margin: 0.3em 0;
+}
+
+.wrapper .intro a,
+.wrapper .intro a:visited {
+  color: rgb(49, 140, 252);
+  text-decoration: none;
+}
+
+
 .wrapper > main {
   display: flex;
   flex-direction: column;
