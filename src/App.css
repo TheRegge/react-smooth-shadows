@@ -9,10 +9,20 @@ body {
 
 .wrapper {
   background-color: rgb(237, 242, 247);
-    display: grid;
-    grid-template-columns: 3fr 1fr;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  height: 100vh;
+}
+
+.wrapper > main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .wrapper > aside {
   padding: 10px;
+  overflow-y: auto;
 }

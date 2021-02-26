@@ -25,12 +25,20 @@ const MySlider = withStyles({
   },
 })(Slider)
 
-const InputSlider = ({ min, max, callback, value }) => {
+const InputSlider = ({ min, max, callback, value, step }) => {
   const handleChange = (event, val) => {
     callback(val)
   }
 
-  return <MySlider onChange={handleChange} value={value} max={max} min={min} />
+  return (
+    <MySlider
+      onChange={handleChange}
+      value={value}
+      max={max}
+      min={min}
+      step={step}
+    />
+  )
 }
 
 InputSlider.defaultProps = {

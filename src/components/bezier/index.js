@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import { Bezier as Bezierjs } from 'bezier-js'
 import Line from './Line'
 import Curve from './Curve'
 import LargeHandle from './LargeHandle'
@@ -78,18 +77,6 @@ const Bezier = ({
     ${points.endPoint.x},${points.endPoint.y}
 `
 
-  const getValues = () => {
-    let arr = []
-    for (let i = 1; i <= observers; i++) {
-      arr.push(getYatT(i / observers) * finalValue)
-    }
-    return arr
-  }
-
-  useEffect(() => {
-    callback(getValues())
-  }, [finalValue, observers, callback])
-
   /**
    * Handler for the mousedown event
    * @param {string} pointId  The reference to the selected point (not a DOM ID)
@@ -116,7 +103,17 @@ const Bezier = ({
       ...points,
       [points.draggingPointId]: { x: viewBoxX, y: viewBoxY },
     })
-    callback(getValues())
+
+    callback({
+      controlPointStart: {
+        x: points.controlPointStart.x / viewBoxWidth,
+        y: points.controlPointStart.y / viewBoxHeight,
+      },
+      controlPointEnd: {
+        x: points.controlPointEnd.x / viewBoxWidth,
+        y: points.controlPointEnd.y / viewBoxHeight,
+      },
+    })
   }
 
   const handleMouseUp = () => {
@@ -124,29 +121,6 @@ const Bezier = ({
       ...points,
       draggingPointId: null,
     })
-  }
-
-  const getYatT = (t) => {
-    const p0x = 1
-    const p0y = 1
-    const p1x = points.controlPointStart.x / viewBoxWidth
-    const p1y = points.controlPointStart.y / viewBoxHeight
-    const p2x = points.controlPointEnd.x / viewBoxWidth
-    const p2y = points.controlPointEnd.y / viewBoxHeight
-    const p3x = 0
-    const p3y = 0
-
-    // // Because Javascript numbers are imprecise, we should
-    // // garentee the extremes a right;
-    if (t === 0 || t === 1) {
-      return t
-    }
-    // 1 minus (bezier formula) because we need to inverse
-    // the results, since on-scren Y coordinates go downward,
-    // but humans see positive growth go upward
-
-    const curve = new Bezierjs(p0x, p0y, p1x, p1y, p2x, p2y, p3x, p3y)
-    return 1 - curve.get(t).y
   }
 
   return (
