@@ -30,7 +30,7 @@ export const getAllShadows = createSelector(
       const s = spread ? ` ${spread}px` : ''
       const sf = spread ? ` <span class="value">${spread}px</span>` : ''
       const endline = i === numShadows - 1 ? '' : ',\n'
-      const breakline = i === numShadows - 1 ? '' : '<br />'
+      const breakline = i === numShadows - 1 ? '' : ',<br />'
       styles += `0 ${v}px ${b}px${s} rgba(0, 0, 0, ${a})${endline}`
       formatted += `&nbsp; &nbsp;0 <span class="value">${v}</span>px <span class="value">${b}</span>px${sf} rgba(0, 0, 0, <span class="value">${a}</span>)${breakline}`
     }
