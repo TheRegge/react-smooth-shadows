@@ -1,3 +1,5 @@
+import React from 'react'
+
 const SmallHandle = ({ coordinates, onMouseDown }) => (
   <ellipse
     cx={coordinates.x}
