@@ -1,7 +1,7 @@
 import React from 'react'
 import Bezier from '../../components/bezier'
 
-export default {
+const Story = {
   title: 'SVG/Bezier Cubic Curve',
   component: Bezier,
   argTypes: {
@@ -12,6 +12,7 @@ export default {
       },
     },
     callback: { action: 'callback' },
+    curveColor: { control: 'color' },
   },
 }
 
@@ -33,4 +34,5 @@ In.args = {
 }
 In.storyName = 'Easing "in" preset'
 
+export default Story
 export { Default, InOut, In }

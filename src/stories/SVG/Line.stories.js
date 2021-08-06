@@ -1,7 +1,7 @@
 import React from 'react'
 import Line from '../../components/bezier/Line'
 
-export default {
+const Story = {
   title: 'SVG/Line',
   component: Line,
   argTypes: {
@@ -22,4 +22,5 @@ Default.args = {
   to: { x: 100, y: 100 },
 }
 
+export default Story
 export { Default }

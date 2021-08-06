@@ -1,7 +1,7 @@
 import React from 'react'
 import LargeHandle from '../../components/bezier/LargeHandle'
 
-export default {
+const Story = {
   title: 'SVG/LargeHandle',
   component: LargeHandle,
   argTypes: {
@@ -27,4 +27,5 @@ Default.args = {
   radi: { x: 20, y: 20 },
 }
 
+export default Story
 export { Default }

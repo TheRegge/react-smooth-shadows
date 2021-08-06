@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Header } from './Header'
 
-export default {
+const Story = {
   title: 'Example/Header',
   component: Header,
 }
@@ -16,3 +16,5 @@ LoggedIn.args = {
 
 export const LoggedOut = Template.bind({})
 LoggedOut.args = {}
+
+export default Story

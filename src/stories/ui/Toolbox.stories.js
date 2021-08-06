@@ -1,7 +1,7 @@
 import React from 'react'
 import Toolbox from '../../components/ui/Toolbox'
 
-export default {
+const Story = {
   title: 'UI/Toolbox',
   component: Toolbox,
 }
@@ -25,4 +25,5 @@ WithCounter.args = { counter: '123' }
 const WithBoth = Template.bind({})
 WithBoth.args = { label: 'A label', counter: '123' }
 
+export default Story
 export { Default, WithLabel, WithCounter, WithBoth }
