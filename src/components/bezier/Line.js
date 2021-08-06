@@ -24,11 +24,12 @@ Line.propTypes = {
   from: PropTypes.shape({
     x: PropTypes.number,
     y: PropTypes.number,
-  }),
+  }).isRequired,
+  /**
   to: PropTypes.shape({
     x: PropTypes.number,
     y: PropTypes.number,
-  }),
+  }).isRequired,
   dash: PropTypes.array,
 }
 
