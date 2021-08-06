@@ -14,6 +14,7 @@
     "bezier-js": "^4.0.3",
     "clsx": "^1.1.1",
     "react": "^17.0.1",
+    "react-copy-to-clipboard": "^5.0.3",
     "react-dom": "^17.0.1",
     "react-redux": "^7.2.2",
     "react-scripts": "4.0.2",

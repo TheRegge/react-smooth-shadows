@@ -1,30 +1,54 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { useSelector } from 'react-redux'
 import { getAllShadows } from './shadowsSelector'
+import { CopyToClipboard } from 'react-copy-to-clipboard'
 
 const useStyles = makeStyles({
-  boxStyles: (props) => ({
-    alignItems: 'center',
-    backgroundColor: props.bgcolor,
-    borderRadius: '6px',
-    color: 'rgb(148, 166, 184)',
+  boxStyles: props => ({
     display: 'flex',
+    alignItems: 'center',
     flexDirection: 'column',
-    fontFamily: "'PT Mono', monospace",
     justifyContent: 'center',
-    lineHeight: '25px',
-    marginTop: '-14vh',
+
+    color: 'rgb(148, 166, 184)',
+    backgroundColor: props.bgcolor,
+
+    borderRadius: '6px',
+    marginTop: '6em',
+    marginBottom: '5em',
     minHeight: '240px',
     width: '40%',
-    minWidth: '200px',
-    padding: '1em 2em',
-    whiteSpace: 'pre',
+    minWidth: '480px',
+    padding: '2em',
+
     '& .value': {
       color: 'rgb(36, 109, 245)',
-      fontWeight: 'bold',
+      fontWeight: 'bold'
     },
+
+    '& .code': {
+      fontFamily: "'PT Mono', monospace",
+      lineHeight: '25px',
+      whiteSpace: 'break-spaces'
+    }
   }),
+  copy: {
+    paddingTop: '2.4em',
+    fontSize: '0.8em',
+    alignSelf: 'flex-end',
+    cursor: 'pointer',
+    transition: 'color 200ms',
+    '&:hover': {
+      color: '#444'
+    }
+  },
+  copied: {
+    color: 'orange',
+    '&:hover': {
+      color: 'darkorange'
+    }
+  }
 })
 
 /**
@@ -34,42 +58,45 @@ export function Shadows(props) {
   const classes = useStyles(props)
   const shadowBoxRef = useRef(null)
 
-  const shadows = useSelector((state) => getAllShadows(state))
+  const shadows = useSelector(state => getAllShadows(state))
+  const shadowsStyles = `box-shadow: ${shadows.styles}`
 
-  // useEffect(() => {
-  //   let layers = ''
-  //   let formattedLayers = ''
-  //   const clonedAlphas = [...alphas]
+  const [clipboard, setClipboard] = useState({
+    value: shadowsStyles,
+    copied: false
+  })
 
-  //   if (reversed) clonedAlphas.reverse()
-
-  //   for (let i = 0; i < numShadows; i++) {
-  //     const a = round(clonedAlphas[i], 3)
-  //     const v = round(vDistances[i], 2)
-  //     const b = round(blurs[i], 2)
-  //     const endline = i === numShadows - 1 ? '' : ',\n'
-  //     layers += `0 ${v}px ${b}px rgba(0, 0, 0, ${a})${endline}`
-  //     formattedLayers += `0 <span>${v}</span>px <span>${b}</span>px rgba(0, 0, 0, <span>${a}</span>)${endline}`
-
-  //     setShadows(layers + ';')
-  //     setFormattedShadows(formattedLayers + ';')
-  //   }
-  // }, [numShadows, alphas, vDistances, blurs, reversed])
+  useEffect(() => {
+    setClipboard({ value: `box-shadow: ${shadows.styles}`, copied: false })
+  }, [shadows])
 
   return (
     <>
       <style>
         {`.shadows {
-          box-shadow: ${shadows.styles}
+          ${shadowsStyles}
         }`}
       </style>
 
       <div ref={shadowBoxRef} className={`${classes.boxStyles} shadows`}>
-        <p>
+        <p className="code">
           box-shadow:
           <br />
           <span dangerouslySetInnerHTML={{ __html: shadows.formatted }} />
         </p>
+
+        <CopyToClipboard
+          text={clipboard.value}
+          onCopy={() => setClipboard({ copied: true })}
+        >
+          {clipboard.copied ? (
+            <span className={`${classes.copy} ${classes.copied}`}>
+              Copied! Make changes and copy again
+            </span>
+          ) : (
+            <span className={classes.copy}>Copy to clipboard</span>
+          )}
+        </CopyToClipboard>
       </div>
     </>
   )
