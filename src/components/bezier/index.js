@@ -197,6 +197,7 @@ Bezier.propTypes = {
    */
   callback: PropTypes.func,
   /**
+   * @number
    * The number of points to observe on
    * the curve
    */

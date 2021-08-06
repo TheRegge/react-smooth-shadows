@@ -19,13 +19,24 @@ Line.defaultProps = {
 }
 
 Line.propTypes = {
+  /**
+   * The line color
+   */
   color: PropTypes.string,
+  /**
+   * The thickness of the line
+   */
   strokeWidth: PropTypes.number,
+  /**
+   * The line's starting coordinates
+   */
   from: PropTypes.shape({
     x: PropTypes.number,
     y: PropTypes.number,
   }).isRequired,
   /**
+   * The line's ending coordinates
+   */
   to: PropTypes.shape({
     x: PropTypes.number,
     y: PropTypes.number,
